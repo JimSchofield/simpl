@@ -1,0 +1,27 @@
+html, body {
+    background: $COLOR_OFFWHITE;
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.site-content {
+    flex: 1;
+}
+
+.widget-area > * + * {
+    margin-top: 1em;
+}
+
+.wp-block-guty-blocks-image-hero {
+    margin-bottom: 1em;
+}

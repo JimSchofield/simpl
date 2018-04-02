@@ -1,0 +1,12 @@
+// Adjusts width of prism code to extend past constrain_small
+.wp-block-guty-blocks-prism-code {
+    // margin-right: calc(50% - 50vw + 16px);
+    margin-bottom: 1em;
+
+    pre {
+        border: 5px solid $COLOR_GOLD;
+        // border-radius: 4px;
+        font-size: .8em;
+        background: white;
+    }
+}

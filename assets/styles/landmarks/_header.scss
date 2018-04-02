@@ -1,0 +1,119 @@
+.header {
+    background: $COLOR_LIGHT_PURPLE;
+    color: $COLOR_OFFWHITE;
+    border-radius: 2px 0 2px 2px;
+
+    a {
+        color: $COLOR_OFFWHITE;
+
+        &:hover,
+        &:focus {
+            color: $COLOR_GOLD;
+            background: transparent;
+        }
+    }
+}
+
+.header-inner {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.header-menu-icon {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    margin: 2em;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: $COLOR_OFFWHITE;
+    }
+}
+
+.header-title {
+    @include headerFont();
+    font-size: 2em;
+    margin: 22px 0 22px 22px;
+}
+
+.header-branding {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .header-description {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+.hamburger {
+    display: block;
+}
+.close-icon {
+    display: none;
+}
+[aria-expanded="true"] { 
+    .hamburger {
+        display: none;
+    }
+    .close-icon {
+        display: block;
+    }
+}
+
+.menu-menu-1-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: 300ms;
+    }
+
+    .menu[aria-expanded="true"] {
+        max-height: 300px;
+        margin: 0 2em 2em 2em;
+
+        li {
+            opacity: 1;
+        }
+    }
+
+    .menu li {
+        display: inline-block;
+        font-family: "bungee";
+        letter-spacing: 1.2px;
+        font-size: 1.5em;
+        opacity: 0;
+        transition: 300ms;
+
+        &:after{
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: .5em;
+            width: .5em;
+            height: .5em;
+            background: $COLOR_OFFWHITE;
+        }
+
+        &.current_page_item:after{
+            background: $COLOR_GOLD;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: $COLOR_GREEN;
+    transition: 300ms;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $COLOR_LIGHT_GREEN;
+        background: $COLOR_OFFWHITE;
+    }
+}
+
+li:before {
+    content:'';
+    display: inline-block;
+    background: $COLOR_LIGHT_PURPLE;
+    width: .5em;
+    height: .5em;
+    margin-right: .2em;
+}
+
+
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    background: white;
+    transform: translateY(-100%);
+    z-index: 9999;
+
+    &:focus {
+        transform: translateY(0);
+    }
+}
+
+.more-link {
+    font-family: $FONT_DISPLAY;
+}

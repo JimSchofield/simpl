@@ -1,0 +1,24 @@
+.constrain {
+    max-width: $MAX_WIDTH;
+    padding: 0 8px;
+}
+
+.constrain_center {
+    margin: auto;
+}
+
+.constrain_small {
+    max-width: $MAX_WIDTH_SMALL;
+}
+
+.section {
+    padding: 4em 0;
+}
+
+
+//constraining content elements
+
+.entry-content > p,
+.entry-content > ul {
+    max-width: $MAX_WIDTH_SMALL;
+}
