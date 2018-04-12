@@ -18,6 +18,21 @@ $page_for_posts = get_option('page_for_posts');
 
 if ( ! empty( $page_for_posts ) ) {
     $page_for_posts_post = get_post( $page_for_posts );
+} else {
+
+	$pages = get_posts(
+		array(
+			'post_type'  => 'page',
+			'fields'     => 'ids',
+			'nopaging'   => true,
+			'meta_key'   => '_wp_page_template',
+			'meta_value' => 'template-blog.php',
+		)
+	);
+
+	if ( ! empty( $pages[0] ) ) {
+		$page_for_posts_post = get_post( $pages[0] );
+	}	
 }
 
 ?>

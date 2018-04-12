@@ -18,7 +18,16 @@
 
 //constraining content elements
 
+.entry-content a {
+    text-decoration: underline;
+}
+
 .entry-content > p,
 .entry-content > ul {
+    max-width: $MAX_WIDTH_SMALL;
+}
+
+.entry-content > .wp-block-image {
+    margin-left: 0;
     max-width: $MAX_WIDTH_SMALL;
 }

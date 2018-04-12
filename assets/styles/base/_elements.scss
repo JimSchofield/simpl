@@ -14,15 +14,23 @@ a {
     }
 }
 
-li:before {
-    content:'';
-    display: inline-block;
-    background: $COLOR_LIGHT_PURPLE;
-    width: .5em;
-    height: .5em;
-    margin-right: .2em;
+ol {
+    list-style-type: decimal;
+    margin: 0 0 1em 1em;
 }
 
+ul {
+    margin-bottom: 1em;
+
+    li:before {
+        content:'';
+        display: inline-block;
+        background: $COLOR_LIGHT_PURPLE;
+        width: .5em;
+        height: .5em;
+        margin-right: .2em;
+    }
+}
 
 .skip-link {
     position: absolute;

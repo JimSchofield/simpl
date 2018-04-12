@@ -76,16 +76,21 @@ if ( post_password_required() ) {
 	$aria_req = ( $req ? " aria-required='true'" : '' );
 	$html_req = ( $req ? " required='required'" : '' );
 	$html5    = 'html5' === $args['format'];
+	
+	$fields = array(
+		'author' => '<p class="comment-form-author">' . '<label for="author" class="isVisuallyHidden">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+					'<input id="author" name="author" type="text" placeholder="Name" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></p>',
+		'email'  => '<p class="comment-form-email"><label for="email" class="isVisuallyHidden">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+					'<input id="email" name="email" placeholder="Email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>',
+		'url'    => '<p class="comment-form-url"><label for="url" class="isVisuallyHidden">' . __( 'Website' ) . '</label> ' .
+					'<input id="url" name="url" placeholder="Website (optional)"' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" /></p>',
+	);
+
 	$args = array(
 		'title_reply_before'   => '<div class="constrain constrain_center"><h3 id="reply-title" class="comment-reply-title">',
 		'title_reply_after'    => '</h3></div>',
 		'comment_field'        => '<p class="comment-form-comment"><label for="comment" class="isVisuallyHidden">' . _x( 'Comment', 'noun' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required" placeholder="Comments"></textarea></p>',
-		'author' => '<p class="comment-form-author">' . '<label for="author" class="isVisuallyHidden">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-		            '<input id="author" name="author" type="text" placeholder="Name" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></p>',
-		'email'  => '<p class="comment-form-email"><label for="email" class="isVisuallyHidden">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-		            '<input id="email" name="email" placeholder="Email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>',
-		'url'    => '<p class="comment-form-url"><label for="url" class="isVisuallyHidden">' . __( 'Website' ) . '</label> ' .
-		            '<input id="url" name="url" placeholder="Website (optional)"' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" /></p>',
+		'fields'			   => $fields,
 		'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s</button>',
 	);
 

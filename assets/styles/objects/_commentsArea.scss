@@ -50,6 +50,10 @@
         }
     }
 
+    .comment-form-author label {
+        @include isVisuallyHidden();
+    }
+
     .comment-metadata {
         padding: .4em 0;
         font-family: $FONT_DISPLAY;
