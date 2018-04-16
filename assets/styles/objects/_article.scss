@@ -20,4 +20,8 @@ article {
 
 .entry-footer {
     margin-top: 1em;
+
+    > * {
+        display: block;
+    }
 }

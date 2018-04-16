@@ -242,6 +242,18 @@ ul {
     height: .5em;
     margin-right: .2em; }
 
+table {
+  border: 1px solid #222;
+  margin-bottom: 1em; }
+
+td {
+  padding: .5em;
+  border: 1px solid #222; }
+
+.wp-block-table {
+  display: table;
+  overflow: auto; }
+
 .skip-link {
   position: absolute;
   top: 0;
@@ -469,6 +481,8 @@ article {
 
 .entry-footer {
   margin-top: 1em; }
+  .entry-footer > * {
+    display: block; }
 
 .wp-block-guty-blocks-prism-code {
   margin-bottom: 1em; }

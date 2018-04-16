@@ -32,6 +32,21 @@ ul {
     }
 }
 
+table {
+    border: 1px solid $COLOR_BLACK;
+    margin-bottom: 1em;
+}
+
+td {
+    padding: .5em;
+    border: 1px solid #222;
+}
+
+.wp-block-table {
+    display: table;
+    overflow: auto;
+}
+
 .skip-link {
     position: absolute;
     top: 0;
