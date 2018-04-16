@@ -254,8 +254,7 @@ td {
   border: 1px solid #222; }
 
 .wp-block-table {
-  display: table;
-  overflow: auto; }
+  border: none; }
 
 .skip-link {
   position: absolute;
@@ -526,7 +525,8 @@ article {
   .comments-area .comment-list {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    list-style-type: none; }
   .comments-area .comment-list > * {
     margin: 1em 0;
     max-width: 30em; }
