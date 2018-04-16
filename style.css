@@ -484,6 +484,9 @@ article {
   .entry-footer > * {
     display: block; }
 
+.cat-links, .edit-link, .tags-links {
+  display: block; }
+
 .wp-block-guty-blocks-prism-code {
   margin-bottom: 1em; }
   .wp-block-guty-blocks-prism-code pre {
