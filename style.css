@@ -228,6 +228,9 @@ a {
     color: #427B86;
     background: #F4F7F7; }
 
+img {
+  max-width: 100%; }
+
 ol {
   list-style-type: decimal;
   margin: 0 0 1em 1em; }
