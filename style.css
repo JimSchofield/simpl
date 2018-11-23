@@ -295,7 +295,6 @@ td {
   max-width: 30em; }
 
 .header {
-  background: #4A5E95;
   color: #F4F7F7;
   border-radius: 2px 0 2px 2px; }
   .header a {
@@ -304,15 +303,15 @@ td {
       color: #e7bd00;
       background: transparent; }
 
-.header-inner {
-  display: flex;
-  flex-direction: column; }
+.main-navigation {
+  background: rgba(74, 94, 149, 0.9); }
+  .main-navigation.toggled {
+    background: #4A5E95; }
 
 .header-menu-icon {
   display: flex;
   width: 36px;
   height: 36px;
-  margin: 2em;
   background: transparent;
   border: none;
   padding: 0;
@@ -325,8 +324,8 @@ td {
 .header-title {
   font-family: "bungee";
   letter-spacing: 2px;
-  font-size: 2em;
-  margin: 22px 0 22px 22px; }
+  font-size: 1em;
+  padding: 12px; }
 
 .header-branding {
   display: flex;
@@ -363,14 +362,15 @@ td {
     transition: 300ms; }
   .menu-menu-1-container .menu[aria-expanded="true"] {
     max-height: 300px;
-    margin: 0 2em 2em 2em; }
+    padding: 0 12px 12px 12px; }
     .menu-menu-1-container .menu[aria-expanded="true"] li {
       opacity: 1; }
   .menu-menu-1-container .menu li {
     display: inline-block;
     font-family: "bungee";
+    margin-top: 12px;
     letter-spacing: 1.2px;
-    font-size: 1.5em;
+    font-size: 1em;
     opacity: 0;
     transition: 300ms; }
     .menu-menu-1-container .menu li:after {

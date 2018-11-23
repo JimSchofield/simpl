@@ -16,7 +16,7 @@ gulp.task('sass', function () {
 
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
-        proxy: 'jschof.local'
+        proxy: 'oldcoyote.dev'
     });
 
     gulp.watch('assets/styles/**/*.scss', ['sass']);

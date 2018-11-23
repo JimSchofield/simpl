@@ -1,11 +1,10 @@
 .header {
-    background: $COLOR_LIGHT_PURPLE;
     color: $COLOR_OFFWHITE;
     border-radius: 2px 0 2px 2px;
-
+    
     a {
         color: $COLOR_OFFWHITE;
-
+        
         &:hover,
         &:focus {
             color: $COLOR_GOLD;
@@ -14,17 +13,23 @@
     }
 }
 
+.main-navigation {
+    background: $COLOR_LIGHT_PURPLE_TRANSPARENT;
+
+    &.toggled {
+        background: $COLOR_LIGHT_PURPLE;
+    }
+
+}
+
 .header-inner {
 
-    display: flex;
-    flex-direction: column;
 }
 
 .header-menu-icon {
     display: flex;
     width: 36px;
     height: 36px;
-    margin: 2em;
     background: transparent;
     border: none;
     padding: 0;
@@ -39,8 +44,8 @@
 
 .header-title {
     @include headerFont();
-    font-size: 2em;
-    margin: 22px 0 22px 22px;
+    font-size: 1em;
+    padding: 12px;
 }
 
 .header-branding {
@@ -87,7 +92,7 @@
 
     .menu[aria-expanded="true"] {
         max-height: 300px;
-        margin: 0 2em 2em 2em;
+        padding: 0 12px 12px 12px;
 
         li {
             opacity: 1;
@@ -97,8 +102,9 @@
     .menu li {
         display: inline-block;
         font-family: "bungee";
+        margin-top: 12px;
         letter-spacing: 1.2px;
-        font-size: 1.5em;
+        font-size: 1em;
         opacity: 0;
         transition: 300ms;
 
