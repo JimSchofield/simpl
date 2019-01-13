@@ -23,7 +23,8 @@
 }
 
 .entry-content > p,
-.entry-content > ul {
+.entry-content > ul,
+.entry-content > ol {
     max-width: $MAX_WIDTH_SMALL;
 }
 

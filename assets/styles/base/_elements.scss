@@ -67,3 +67,7 @@ td {
 .more-link {
     font-family: $FONT_DISPLAY;
 }
+
+li + li {
+    margin-top: .5em;
+}
