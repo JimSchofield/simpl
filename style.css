@@ -270,6 +270,9 @@ td {
 .more-link {
   font-family: "Bungee"; }
 
+li + li {
+  margin-top: .5em; }
+
 .constrain {
   max-width: 1200px;
   padding: 0 8px; }
@@ -287,7 +290,8 @@ td {
   text-decoration: underline; }
 
 .entry-content > p,
-.entry-content > ul {
+.entry-content > ul,
+.entry-content > ol {
   max-width: 30em; }
 
 .entry-content > .wp-block-image {
